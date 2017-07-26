@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<body>
+	<h1>Trivia Game</h1>
+	<div>Time Remaining: <span id="remainingTime"></span></div>
+	<div id="game">
+		<div id="ques"></div>
+		<div id="answers"></div>
+	</div>
+	<script type="text/javascript">
+		var arr=[{ques:"Largest Country",opt:["Russia","USA","Canada","Australia"],ans:"Russia"},{ques:"Country not in asia",opt:["Japan","Austria","Cambodia","Singapore"],ans:"Austria"},{ques:"Most populous country in Africa",opt:["China","India","Nigeria","Egypt"],ans:"Nigeria"}];
+		function display(){
+			for(var i=0;i<arr.length;i++){
+				var app="<div>"+arr[i].ques+"</div>";
+				$("#ques").append(app);
+				//var opts="<div><form>"
+			}
+		};
+		display();
+	</script>
+</body>
+</html>
