@@ -1,0 +1,39 @@
+body{
+	margin:0px;
+}
+#start-game{
+	display:none;
+}
+.container1{
+	background-image: url("../images/map.jpg");
+	height: 100vh;
+}
+.panel1{
+	margin-top: 20vh;
+	min-height: 30vh;
+}
+.btn-option{
+	width:300px;
+	padding:5px;
+	margin:5px;
+
+}
+#showAnswer{
+	display:none;
+}
+#thumbs-up{
+	display:none;
+}
+#thumb-down{
+	display:none;
+}
+#result{
+	display: none;
+}
+.style1{
+	font-size: 18px;
+	margin:5px;
+	padding:5px;
+}
+
+

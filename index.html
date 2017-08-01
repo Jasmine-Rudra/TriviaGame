@@ -2,26 +2,56 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
-	<!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>Trivia Game</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
 <body>
-	<h1>Trivia Game</h1>
-	<div>Time Remaining: <span id="remainingTime"></span></div>
-	<div id="game">
-		<div id="ques"></div>
-		<div id="answers"></div>
+	<div class="container-fluid container1">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+				<div id="starting-div">
+					<div class="panel panel-default text-center panel1">
+						<div class="panel-heading">
+							<h2>Are you ready to test your knowledge?</h2>
+						</div>
+						<div class="panel-body">
+							<button class="btn btn-primary" id="start-the-game">Start!</button>
+						</div>
+					</div>
+				</div> 
+
+				<div id="start-game" >
+					<div class="panel panel-default text-center panel1">
+						<div class="panel-heading">
+							<h2>Geography Trivia Game</h2>
+						</div>
+						<div class="panel-body">
+							<div><h2>Time Remaining: <span id="remainingTime"></span></h2></div>
+							<div id="game">
+								<div class="ques"></div>
+								<div class="options"></div>
+							</div>
+							<div id="showAnswer">
+								<div id="isCorrect"></div>
+								<div id="thumbs-up"><img src="assets/images/yes.png" heigth=150px width=150px ></div>
+								<div><span id="giveAnswer"></span></div>
+								<div id="thumbs-down"><img src="assets/images/no.png" heigth=150px width=150px ></div>
+							</div>
+							<div id="result">
+								<div id="total" class="style1"></div>
+								<div id="right" class="style1"></div>
+								<div id="wrong" class="style1"></div>
+								<div id="not_answered" class="style1"></div>
+								<button class="btn btn-primary" onclick="reset()">Reset</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<script type="text/javascript">
-		var arr=[{ques:"Largest Country",opt:["Russia","USA","Canada","Australia"],ans:"Russia"},{ques:"Country not in asia",opt:["Japan","Austria","Cambodia","Singapore"],ans:"Austria"},{ques:"Most populous country in Africa",opt:["China","India","Nigeria","Egypt"],ans:"Nigeria"}];
-		function display(){
-			for(var i=0;i<arr.length;i++){
-				var app="<div>"+arr[i].ques+"</div>";
-				$("#ques").append(app);
-				//var opts="<div><form>"
-			}
-		};
-		display();
-	</script>
+	<script src="assets/javascript/script.js"></script>
 </body>
 </html>
